@@ -17,6 +17,7 @@ h2 {
 
 #sidebar {
   color: white;
+  overflow: hidden;
   opacity: 1;
   .background {
     position: absolute;
@@ -41,8 +42,6 @@ h2 {
     background: rgba(#333, 0.85);
   }
 
-  //   background-color: cornflowerblue;
-  overflow: hidden;
   .profile {
     text-transform: uppercase;
     text-align: center;
