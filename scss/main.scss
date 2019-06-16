@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 34px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+#sidebar {
+  color: white;
+  opacity: 1;
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/mountains-resized.jpeg");
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    opacity: 0.96;
+    z-index: -1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(#333, 0.85);
+  }
+
+  //   background-color: cornflowerblue;
+  overflow: hidden;
+  .profile {
+    text-transform: uppercase;
+    text-align: center;
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 0.5em;
+    }
+    .portrait {
+      margin-top: 2em;
+      img {
+        border-radius: 250px;
+      }
+    }
+  }
+
+  nav {
+    opacity: 1;
+    #nav-links {
+      // background-color: red;
+      list-style: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      //   padding-left: 20px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+main {
+  position: relative;
+  margin-left: 25%;
+  background-color: white;
+  top: 0;
+}
+.project-block {
+  //   background-color: red;
+  padding: 2em;
+  padding-left: 0;
+  padding-top: 0em;
+  display: grid;
+  grid-template-areas: "date content";
+  .project-date {
+    grid-area: date;
+    height: 120%;
+    margin: 0;
+    margin-left: 0em;
+    border-right: 1px solid #ccc;
+
+    .date {
+      font-size: 14px;
+      font-style: italic;
+      margin: 0;
+      margin-top: 1.7em;
+      padding: 1em;
+    }
+  }
+  .project-border {
+    border-top: 1px solid #ccc;
+    .project-text {
+      grid-area: text;
+    }
+    .project-image {
+      grid-area: image;
+    }
+  }
+}
+@import "mobile";
